@@ -3,6 +3,11 @@ import numpy as np
 import streamlit as st
 from st_aggrid import AgGrid, GridOptionsBuilder
 import time
+from platform import python_version
+  
+  
+print("Current Python Version-", python_version())
+
 
 st.set_page_config(
     page_title="P&L Explained",
@@ -11,6 +16,10 @@ st.set_page_config(
 )
 
 st.title("P&L Explained")
+st.write("Current Python Version-", python_version())
+st.write("Current Pandas version-", pd.__version__)
+st.write("Current Streamlit Version-", st.__version__)
+#st.write("Current AG Grid Version-", AgGrid.__version__)
 
 #Read csv file for analysis
 #sets default path of file
